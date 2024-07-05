@@ -1,15 +1,17 @@
+// ZoomMeeting.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaMicrophone, FaVideo, FaShareSquare, FaLock, FaUsers, FaComments, FaShare, FaRecordVinyl, FaStopCircle } from 'react-icons/fa';
-
+import Photo1 from './images/Photo (1).png'
 const ZoomMeeting = () => {
   return (
     <div className="bg-blue-100 min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 shadow-md w-3/4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold text-gray-800">Zoom Meeting</h2>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
+          <Link to="/" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             View
-          </button>
+          </Link>
         </div>
         <div className="flex justify-center">
           <div className="bg-gray-200 p-4 flex flex-col items-center">
@@ -27,9 +29,9 @@ const ZoomMeeting = () => {
         </div>
         
         <div className="mt-4">
-          <img src="https://tse2.mm.bing.net/th?id=OIP.QtpnO0zkfB1oXtkR9qm1hQHaE8&pid=Api&P=0&h=220" alt="Presenter" className="shadow-md w-full h-96 object-cover" />
+          <img src={Photo1} alt="Presenter" className="shadow-md w-full h-96 object-center" />
         </div>
-        <div className="mt-8 flex justify-center space-x-4 text-gray-500 text-2xl">
+        <div className="mt-8 flex justify-center space-x-12 text-gray-500 text-2xl">
           <FaMicrophone />
           <FaVideo />
           <FaShareSquare />
